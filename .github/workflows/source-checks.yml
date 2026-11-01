@@ -36,8 +36,11 @@ jobs:
           .ci-venv/bin/python -m pip --isolated --disable-pip-version-check install --no-deps --only-binary=:all: Pillow==13.0.0
       - name: Public Python and Node suites only
         shell: bash
-        run: .ci-venv/bin/python tools/check_local.py
+        run: |
+          export TMPDIR="$(.ci-venv/bin/python -c 'import tempfile; from pathlib import Path; print(Path(tempfile.gettempdir()).resolve(strict=True))')"
+          .ci-venv/bin/python tools/check_local.py
       - name: Scope and no-native acceptance boundary
+        if: always()
         shell: bash
         run: |
           printf '%s\n' 'Independent provisioned source-suite checks only.' 'Android/native/Meta execution: NOT RUN.' 'Human novice: NOT DONE.' >> "$GITHUB_STEP_SUMMARY"
