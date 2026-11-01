@@ -332,3 +332,60 @@ it as an external review of this follow-up. Imported trust remains UNVERIFIED,
 backend scores remain null, and no new Meta/device evaluation is implied.
 Independent-host Android and real-human novice observations remain NOT_DONE
 unless a separate actual execution/observation receipt is recorded.
+
+
+## Current public-source local reference observation (2026-11-02)
+
+This later observation used the original physical Mac. It does not close the
+independent Android host or real-human novice gates. It is separate from the
+older fresh-AVD v1/v2 records and all PILOT/FINAL results.
+
+- Actual source: the verified 165-file public archive at
+  `2a114536f83e7b458fb97bb988493aa2132d9c93`, not a copied working directory.
+- A new isolated Python 3.13.12 venv, only bundled pip 25.3 and the previously
+  hash-verified offline Pillow 13.0.0 wheel, ran 482 Python and 73 UI checks.
+  The nested host-interpreter bootstrap error was preserved; the already
+  installed actual base interpreter was then used. No global package changed.
+- Existing six toolchain byte pins passed; domain checks passed 68 checks.
+  Two new notice-bearing APKs were built and their signatures verified.
+- The default avdmanager attempt rejected the already installed image before
+  any emulator launch. The same original preparation was reconciled and the
+  supported direct native configuration mode booted the new owned AVD.
+  No SDK/JDK/image download or license acceptance occurred.
+- A setup-only generation 1 had three accepted setup commands and zero app
+  taps. One freshly observed `android` "Viewing full screen" / "Got it"
+  non-permission acknowledgment was recorded outside the measured app flow;
+  the journal bytes were unchanged by it. No app-only validator was relaxed.
+- The developer-authored FINAL-C reference export remained
+  `0f2185d91acb8e96ca33339e8dc517a0458aedb674c522bf458a935dae7d565d`.
+  It is not video-to-export inference or an automatically generated repair.
+- Measured generation 2 completed both faulty and fixed controls, with eight
+  accepted app inputs, zero ReproLoop model calls and CONFIRMED paired oracle.
+  Both completed, verified preconditions and reached the goal; faulty reported
+  `failure_observed=true`, fixed reported `false`. `visual_match=false` was
+  retained: this is persisted-state/event validation, not visual attestation.
+- The journal retained all three retired setup/faulty/fixed run records, nine
+  accepted setup commands in total, a cancelled lease and zero PENDING/UNKNOWN.
+- Private raw packaging and a fresh extraction both revalidated the exact
+  81-file / 448596-byte oracle proof union. The private ZIP has 85 members and
+  463140 uncompressed bytes; those denominators are not interchangeable.
+  Raw archive SHA-256:
+  `4951bdc3ff8f0e5cd2ac58217542cb42edfd54873e7e7931830d10b32017817d`.
+  It contains private host paths and is NOT a public-sanitized release asset.
+- Only the new owned emulator process was stopped after verification. The
+  original operational emulator/journal and eight prototype files were not
+  targeted. Runtime evidence and build keys were retained privately.
+
+Faulty local APK:
+`7f756bddadd310cc65368ccabfe18eb9a950da5350d327fb8c539a8179937d40`.
+Fixed local APK:
+`bebe16d47e0d7104d120aa4e1211db28cff5562d9ec65ce16dac9410b0ffdbab`.
+These were explicitly admitted local-build bytes; the original default APK pins
+were not changed. No new general success rate, independent human baseline,
+source/producer/OS attestation or speedup is established. Do not pool this pair
+with the original PILOT 2/5 or separate FINAL 3/3.
+
+This documentation-only follow-up does not turn the earlier external audit,
+film, submitted descriptions or remote source-suite receipts into a review or
+execution of later bytes. The tested product-code closure remains the one at
+public `2a114536...`; subsequent doc-only deltas must retain that provenance.

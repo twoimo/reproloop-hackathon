@@ -1,9 +1,11 @@
 # Fresh reproduction runbook (separately admitted local build)
 
-Status: **runbook, not a result.** Nothing in this file has been executed on a
-fresh or independent host. No fresh device run, new AVD or new target is
-authorized by this document. Writing it ran no build, ADB, emulator, model or
-network call.
+Status: **runbook, not authorization.** A later automated SAME-Mac clean-source
+and new-AVD observation is recorded in `CURRENT_STATUS.md` under
+"Current public-source local reference observation (2026-11-02)". It is not an
+independent-machine or real-human novice result, and required explicit local
+setup outside the measured pair. This document itself authorizes no target,
+model call, download or replay.
 
 Read this together with `docs/REPRODUCTION.md` (source-only archive and offline
 checks) and `android/toolchain-lock.json`. Original private build receipts are
@@ -177,12 +179,23 @@ executing any command.
 ```sh
 mkdir -m 700 <NEW_RUNTIME_ROOT>
 python3 tools/bootstrap_owned_avd.py \
+  --direct-config \
   --state-dir <NEW_RUNTIME_ROOT> \
   --sdk "$ANDROID_SDK_ROOT" \
   --jdk "$JAVA_HOME" \
   --name <NEW_AVD_NAME> \
   --port <EVEN_PORT>
 ```
+
+`--direct-config` uses the already installed, exact documented ARM64 image;
+it downloads nothing and keeps the same ownership, boot and config checks.
+This is the locally observed working creation mode. The optional avdmanager
+mode (omit that flag) rejected the installed image with "Package path is not
+valid" / "Valid system image paths ... null" on the observed Mac, before any
+AVD path, bootstrap receipt or emulator launch. That rejected preparation was
+preserved. Do not treat this known pre-launch result as permission to rerun an
+uncertain launch: an existing receipt/process/AVD always requires original-state
+reconciliation first, with no overwriting or re-pinning.
 
 It refuses an existing receipt or AVD path, launches headless, waits for boot,
 records the guest boot ID and writes an owner marker. It preserves the
@@ -262,13 +275,12 @@ or rewrite the journal.
 
 ## 11. Parent reconciliation required
 
-The three commands in sections 7, 9 and 10 (`emit_reference_export.py`,
-`init_owned_journal.py`, and the new `replay_owned_case.py` options
-`--admit-local-build` / `--adb`) are being implemented concurrently by the
-parent owner. The options above follow the parent's planned interface at the
-time of writing. **Before release, reconcile every command line in this file
-with the final `--help` output** and update the text; do not trust this file
-over the code.
+The commands in sections 7, 9 and 10 (`emit_reference_export.py`,
+`init_owned_journal.py`, and `replay_owned_case.py` with
+`--admit-local-build` / `--adb`) are implemented. Their actual `--help` output
+was checked before the local public-source `2a114536...` observation.
+For another revision, reconcile every command with that revision's actual
+`--help`; do not trust documentation over the code.
 
 ## 12. What to record from a fresh run
 
@@ -288,9 +300,11 @@ change to the original cohorts.
 
 ## 13. Limits
 
-- Unexecuted runbook. No part of it has been run end to end on a fresh or
-  different host.
-- Command options for the parent's new tools may change; see section 11.
+- The later SAME-Mac observation used a clean public-source extraction, a new
+  venv, newly signed APKs, a new AVD/journal, a separate setup-only generation
+  and one observed non-permission help acknowledgment before the measured pair.
+  It is not pristine one-click setup, an independent Android host or real novice.
+- Command options can change between revisions; see section 11.
 - The notice folder covers only the Kotlin runtime embedded in the APK; other
   prerequisites and media are covered in `THIRD_PARTY_NOTICES.md` and are not
   legally cleared.
