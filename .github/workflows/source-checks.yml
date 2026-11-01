@@ -1,0 +1,44 @@
+name: Independent source checks (no Android or model)
+on:
+  push:
+    branches: [verification/p2-20261102]
+permissions:
+  contents: read
+jobs:
+  source:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-24.04, macos-26]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0
+        with:
+          python-version: '3.13.12'
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1
+        with:
+          node-version: '26.5.0'
+      - name: Host and immutable source
+        shell: bash
+        run: |
+          python -c 'import platform; print(platform.system(), platform.release(), platform.machine())'
+          git rev-parse HEAD
+          node --version
+          python --version
+      - name: Explicit pinned Pillow provisioning
+        shell: bash
+        run: |
+          python -m venv .ci-venv
+          .ci-venv/bin/python -m pip --isolated --disable-pip-version-check install --no-deps --only-binary=:all: Pillow==13.0.0
+      - name: Public Python and Node suites only
+        shell: bash
+        run: .ci-venv/bin/python tools/check_local.py
+      - name: Scope and no-native acceptance boundary
+        shell: bash
+        run: |
+          printf '%s\n' 'Independent provisioned source-suite checks only.' 'Android/native/Meta execution: NOT RUN.' 'Human novice: NOT DONE.' >> "$GITHUB_STEP_SUMMARY"
+          git diff --exit-code -- ui/app.js ui/dom.test.mjs
