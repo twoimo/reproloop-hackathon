@@ -299,7 +299,7 @@ async function loadRecordedCase() {
     try {
       const result = await loadRecordedMedia(identity.caseId, slot, identity.step);
       if (currentSlot()) {
-        await attachSlot(slot, result.file, slot === "video" ? "video" : "image", result.expectedHash);
+        await attachSlot(slot, result.file, slot === "video" ? "video" : "image", result.expectedHash, currentSlot);
       }
     } catch {
       if (currentSlot()) {
@@ -342,7 +342,7 @@ function applyText(textValue, source) {
   render();
 }
 
-async function attachSlot(slot, file, expectedKind, bundledExpectedHash = null) {
+async function attachSlot(slot, file, expectedKind, bundledExpectedHash = null, readCurrent = () => true) {
   if (!["one", "two", "video"].includes(slot)) return;
   clearPreviewSlot(slot);
   const decision = classifyAttachment(file);
@@ -353,6 +353,7 @@ async function attachSlot(slot, file, expectedKind, bundledExpectedHash = null) 
   const url = URL.createObjectURL(file);
   state.previewUrls[slot] = url;
   state.previewOrigins[slot] = bundledExpectedHash ? "recorded" : "manual";
+  const current = () => state.previewUrls[slot] === url && readCurrent();
   const stage = document.getElementById(`preview-stage-${slot}`);
   const media = document.createElement(expectedKind === "image" ? "img" : "video");
   if (expectedKind === "image") media.alt = decision.name;
@@ -368,7 +369,7 @@ async function attachSlot(slot, file, expectedKind, bundledExpectedHash = null) 
   try {
     const bytes = await file.arrayBuffer();
     const hash = Array.from(new Uint8Array(await crypto.subtle.digest("SHA-256", bytes)), x => x.toString(16).padStart(2, "0")).join("");
-    if (state.previewUrls[slot] !== url) return;
+    if (!current()) return;
     const row = rowChoices(state.loaded.document).find(choice => choice.id === state.caseId)?.row;
     const claim = slot === "one" ? row?.png_claims?.faulty : slot === "two" ? row?.png_claims?.fixed : row?.media?.sha256;
     const expected = bundledExpectedHash || (typeof claim === "string" ? claim : claim?.sha256);
@@ -377,7 +378,7 @@ async function attachSlot(slot, file, expectedKind, bundledExpectedHash = null) 
     const comparison = expected ? (hash === expected ? `Bytes match the ${claimName}.` : `Bytes DO NOT match the ${claimName}.`) : "No imported hash is available for comparison.";
     text(`preview-line-${slot}`, `${decision.name} SHA-256 ${hash}. ${comparison} Not source attestation.`);
   } catch {
-    if (state.previewUrls[slot] === url) text(`preview-line-${slot}`, `${decision.name}. Byte hash unavailable; unverified.`);
+    if (current()) text(`preview-line-${slot}`, `${decision.name}. Byte hash unavailable; unverified.`);
   }
 }
 

@@ -1,4 +1,4 @@
-# Private demo-only review: participant sheet (UNFILLED)
+# Public demo-only review: participant sheet (UNFILLED)
 
 Status: **NOT DONE.** A real person new to ReproLoop must watch the actual video
 and answer. No LLM, developer guess or simulated persona can fill this sheet.
@@ -7,10 +7,17 @@ one does not close the other or prove productivity/general usability.
 
 ## Before viewing
 
-The observer provides only the verified private 180-second demo and this sheet.
+The observer provides only this public demo and this sheet:
+
+https://www.youtube.com/watch?v=ISBq4Q6JSQg
+
+The served watch page displays 3:00. The upload file is 179.958333 seconds,
+4319 frames at 24fps, SHA-256
+`2be767355d2ee1d597501d91ff7fab6d33cd80d858b0bffce6526c567f32bbfc`.
+It is a re-encoded upload derivative, not the preserved 180-second master.
 Do not read the observer guide, source repository, expected answers or project
 status first. No SDK, account login, machine access or device control is needed.
-Do not publish or forward this private review package. Participation is voluntary;
+The video is already public; do not publish a participant's answers or identity without consent. Participation is voluntary;
 record no face, voice or personal identity unless separately consented.
 
 - Anonymous participant code: ______

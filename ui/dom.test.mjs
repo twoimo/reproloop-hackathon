@@ -436,3 +436,31 @@ test('manual intermediate image comparison names the terminal claim, not the sel
  assert.match(app.nodes.get('trust-line').textContent,/unverified/);
  assert.equal(app.nodes.get('pairs').textContent,'not recorded');
 });
+
+
+for (const slot of ['one', 'two', 'video']) {
+ for (const outcome of ['digest success', 'read failure']) {
+  test(`same-case retry failure survives an older ${slot} ${outcome}`, async () => {
+   const app=boot();let resolveOld,rejectOld;
+   app.context.loadRecordedMedia=async(id,requestedSlot)=>requestedSlot===slot
+    ? {file:{...mediaFile('older-'+slot,slot==='video'?'video/mp4':'image/png'),arrayBuffer:()=>new Promise((resolve,reject)=>{resolveOld=resolve;rejectOld=reject})},expectedHash:'0'.repeat(64)}
+    : stubRecordedFile(id,requestedSlot);
+   const older=app.nodes.get('recorded-demo').listeners.click();
+   await new Promise(resolve=>setImmediate(resolve));
+   assert.equal(typeof resolveOld,'function');
+   const cachedUrl=vm.runInContext(`state.previewUrls.${slot}`,app.context);
+   app.context.loadRecordedMedia=async()=>{throw Error('newer fetch unavailable')};
+   await app.nodes.get('case-list').children[2].children[0].listeners.click();
+   const failureLine=app.nodes.get('preview-line-'+slot).textContent;
+   assert.match(failureLine,/Saved media unavailable/);
+   if(outcome==='digest success')resolveOld(new Uint8Array([1,2,3,4]).buffer);
+   else rejectOld(Error('older file read failed'));
+   await older;
+   assert.equal(app.nodes.get('preview-line-'+slot).textContent,failureLine);
+   assert.equal(vm.runInContext(`state.previewUrls.${slot}`,app.context),cachedUrl);
+   assert.equal(app.revoked.includes(cachedUrl),false);
+   assert.equal(app.nodes.get('pairs').textContent,'not recorded');
+   assert.match(app.nodes.get('trust-line').textContent,/unverified/);
+  });
+ }
+}

@@ -18,7 +18,7 @@ python3 tools/check_local.py
 ```
 
 This entry point discovers each non-package Python test directory, then runs
-67 Node DOM/adapter/recorded-media tests in the current workbench candidate. A missing Node is a failure, not a silent UI skip.
+73 Node DOM/adapter/recorded-media tests in the current workbench candidate. The post-submission R-UI-01 correction adds six same-case retry regressions: two hash outcomes in each of three slots. A missing Node is a failure, not a silent UI skip.
 Pillow is optional for some runtime paths, but tests/video_frames/test_video_frames.py
 imports it unconditionally: absent Pillow FAILS full checks, not a skip. The one
 optional skip requires an explicitly supplied owned MP4 and is separate. Report

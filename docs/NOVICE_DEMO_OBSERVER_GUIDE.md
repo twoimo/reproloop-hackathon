@@ -1,4 +1,4 @@
-# Private demo-only review: observer guide (NOT A RESULT)
+# Demo-only review: observer guide (NOT A RESULT)
 
 Do not give this file to the participant until their unaided answers are saved.
 A real observer must see a real new participant view the actual film. The
@@ -8,7 +8,7 @@ cannot fabricate participation, answers, times, consent or sign-off.
 
 ## Distinct gates
 
-- Demo-only comprehension: actual 180-second film + participant sheet. No SDK
+- Demo-only comprehension: actual current public 3:00 watch-page film + participant sheet. No SDK
   or device is needed. This does not test source installation or independence.
 - Source setup: existing NOVICE_REVIEW.md with an appropriate host and separately
   authorized device steps. Do not require it just to start the demo-only check.
@@ -18,8 +18,10 @@ cannot fabricate participation, answers, times, consent or sign-off.
 ## Procedure
 
 1. Verify the participant kit's manifest and film hash against the prepared
-   receipt. The current recorded-v3 film is the preexisting 180-second demo;
-   it does not depict the later fresh-AVD setup continuation.
+   receipt. The participant sheet binds the current public upload derivative
+   `2be767355d2ee1d597501d91ff7fab6d33cd80d858b0bffce6526c567f32bbfc`
+   (179.958333s / 4319 frames). Do not substitute an older private film.
+   This recorded workbench presentation is not a fresh independent-host run.
 2. Give only the film, participant sheet and neutral instructions. Keep this
    guide/source/status hidden until the answers are recorded.
 3. Note start/end on one clock. Preserve pauses, rewatches, assistance and where

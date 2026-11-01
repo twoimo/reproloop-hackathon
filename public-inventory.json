@@ -163,10 +163,10 @@
       "sha256": "bae224273c40b487eca149421d044e2f4f9e0f7cdbb122757ffebd8a3ed4e568"
     },
     {
-      "bytes": 32262,
+      "bytes": 33153,
       "path": "docs/CURRENT_STATUS.md",
       "role": "source",
-      "sha256": "c30358b9250d8c487468c9faa943a15199972f88c13cbb351cadfaad1fd86c61"
+      "sha256": "2df39e9e09e1ff3fb0adeb7d86ddf5227b6d2a26d7e180bbadf29328eea65616"
     },
     {
       "bytes": 13091,
@@ -181,16 +181,16 @@
       "sha256": "3112c10d103211e2b79cf03654687ba76a3061352c37e1090edaa4cf71db3b8b"
     },
     {
-      "bytes": 4049,
+      "bytes": 4219,
       "path": "docs/NOVICE_DEMO_OBSERVER_GUIDE.md",
       "role": "source",
-      "sha256": "d6df185c1d136d789b80d9ca9e591486673aaeb0fc8883a940a227fd82e04e21"
+      "sha256": "c389c73077939828a73f018c96f044daaeb9e5fcd12a9eb587de865ae9842551"
     },
     {
-      "bytes": 2231,
+      "bytes": 2547,
       "path": "docs/NOVICE_DEMO_REVIEW.md",
       "role": "source",
-      "sha256": "a2285332dfd326375b440d8b88c3be031b6bc976838db09ea2a7d5a91844a698"
+      "sha256": "494783774549926de8e98946e927d504c67186269f5a3df0727ac1faed065e41"
     },
     {
       "bytes": 4016,
@@ -211,10 +211,10 @@
       "sha256": "78259e5ae212a74bf20f2c413cbbd90ed5af4e91c9527091b9c9b579fc68e4b4"
     },
     {
-      "bytes": 14227,
+      "bytes": 14346,
       "path": "docs/REPRODUCTION.md",
       "role": "source",
-      "sha256": "acfe7668e98326c1d154b90f5633904502338d984d2cc6116398ac45ec724e53"
+      "sha256": "12067170b7ca38128531797c300ba80b664029299495aabb7f65af27d259790b"
     },
     {
       "bytes": 4877,
@@ -793,10 +793,10 @@
       "sha256": "91a7548e7f752403144c7a95d9d83aea82bf292d629da3ee079bb33a54f1a6a3"
     },
     {
-      "bytes": 9281,
+      "bytes": 9561,
       "path": "ui/README.md",
       "role": "source",
-      "sha256": "b71f826b5df8f823adbc17547ada9dde94339fd15c705ac4c4e671711069f14f"
+      "sha256": "67d4b4428634a888ef43c71fed7c16dca1a1ced23ff40c14c329a1a342207290"
     },
     {
       "bytes": 13258,
@@ -811,10 +811,10 @@
       "sha256": "61b9ae98237b827ddb22b0cee23efb4738757d9fb770c1722ed3a61a0ed13198"
     },
     {
-      "bytes": 21687,
+      "bytes": 21757,
       "path": "ui/app.js",
       "role": "source",
-      "sha256": "ad33b09fb82886f4dadbacb38f16a79bc8cb07c5e109dbc1e80fe98b6e594485"
+      "sha256": "8950b8c03516408c217800a153438a16190fdef3e496cdf07249bc8d2d297d90"
     },
     {
       "bytes": 19989,
@@ -823,10 +823,10 @@
       "sha256": "663382814bd887fce6ab9e1662dd1319d68593f611fddeef5d95516c28755fa1"
     },
     {
-      "bytes": 32349,
+      "bytes": 33953,
       "path": "ui/dom.test.mjs",
       "role": "source",
-      "sha256": "bdd049b20c10ddc1ed4ed5b5908ddb1f2c6be88cab27985e1d436a03256472aa"
+      "sha256": "34f49af8833908728d84c9bb4cf279a2c83c346f1253e65961dc19204398df00"
     },
     {
       "bytes": 3744,

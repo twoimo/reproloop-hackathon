@@ -317,3 +317,18 @@ Historical `docs/01`–`docs/06`, `IMPLEMENTATION_CHARTER.md` and captured sourc
 - Human novice review cannot be replaced by an LLM's predicted usability.
 - Any new efficacy statement needs a prospectively defined fair workload, retained failures and appropriate uncertainty/limits. A human-effort or productivity claim additionally requires measured human setup/authoring effort. No new experiment is required merely to retain the existing narrow private instrument. More unit tests are not product-quality or speed evidence.
 - Private progress and source review do not authorize a public repository flip, release, upload/publication or contest submission.
+
+
+## Post-submission R-UI-01 correction (2026-11-02)
+
+The submitted public root remains historical `1de6fc4` (private source `3194d32`).
+This small follow-up binds bundled hash success and read-error annotations to
+both their object URL and the same active read generation. An older same-case
+hash may no longer overwrite a newer retry failure. Manual pending hashes
+remain valid across same-case navigation. Six new regressions fail `3194d32`
+and pass the correction; the current Node UI suite contains 73 tests.
+The earlier external reverse report remains scoped to `3194d32`; do not relabel
+it as an external review of this follow-up. Imported trust remains UNVERIFIED,
+backend scores remain null, and no new Meta/device evaluation is implied.
+Independent-host Android and real-human novice observations remain NOT_DONE
+unless a separate actual execution/observation receipt is recorded.
