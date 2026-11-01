@@ -1,0 +1,24 @@
+{
+  "python": "3.13.12",
+  "pillow": "13.0.0",
+  "ffmpeg": "ffmpeg version 9.0.2 Copyright (c) 2000-2026 the FFmpeg developers",
+  "ffprobe": "ffprobe version 9.0.2 Copyright (c) 2007-2026 the FFmpeg developers",
+  "renderer_sha256": "4600818c6d5668a419e0e41162c7f02e94d3db7b7b352bb79e97c4916aa15ac0",
+  "aggregate_claims_sha256": "5ba23e05e993f0cf41ccdd63b8774356db17728ffbd7b560fce74b906abc3b0d",
+  "source_video_duration_seconds": 31.158356,
+  "source_video_playback_factor": 1.7310197777777778,
+  "video_sha256": "4c6255616a98cba7400886115ffbfd97bd387685ffd6d8ccc43c5ab22b59feb6",
+  "duration_seconds": 180,
+  "resolution": [
+    1920,
+    1080
+  ],
+  "fps": 24,
+  "frames": 4320,
+  "audio_streams": 0,
+  "new_native_calls": 0,
+  "new_model_calls": 0,
+  "public_uploads": 0,
+  "human_novice_readthrough": "NOT_DONE",
+  "no_media_attestation": true
+}

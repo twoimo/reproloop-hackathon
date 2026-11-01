@@ -1,0 +1,304 @@
+{
+  "schema": "reproloop.evidence.v2",
+  "evidence_level": "HOST_OBSERVED",
+  "mode": "real",
+  "meta_calls": 15,
+  "android_runs": 9,
+  "video_calls": 3,
+  "cua_calls": 12,
+  "cohort": {
+    "id": "native-v4obs1-final",
+    "split": "FINAL",
+    "condition": "B3_NATIVE_VIDEO_SAMPLED_CONTEXT_V4_OBS1",
+    "planned_case_ids": [
+      "FINAL-A",
+      "FINAL-B",
+      "FINAL-C"
+    ],
+    "attempted": 3,
+    "complete": 3,
+    "unknown": 0,
+    "excluded": 0,
+    "not_run_ids": [],
+    "valid_export_pairs": null,
+    "fixed_failure_signals": null,
+    "invalid_confirmations": null,
+    "note": "Stored claims from FINAL only; never combine with old v3 pilot. Android runs = 3 CUA explorations and 6 model-free controls, excluding source creation."
+  },
+  "cases": [
+    {
+      "case_id": "FINAL-A",
+      "variant": "A",
+      "bug_family": "F01",
+      "file_claim": {
+        "verdict": "SUCCESS \u2014 stored run claim, not a viewer verdict"
+      },
+      "task_steps": [
+        {
+          "expected_screen": "tasks",
+          "resource_id": "com.tinyburn.reproloop.lab:id/task_target",
+          "visible_text": "Target task: Release"
+        },
+        {
+          "expected_screen": "selected",
+          "resource_id": "com.tinyburn.reproloop.lab:id/rename_open",
+          "visible_text": "Rename"
+        },
+        {
+          "expected_screen": "rename",
+          "resource_id": "com.tinyburn.reproloop.lab:id/preset_today",
+          "visible_text": "Today"
+        },
+        {
+          "expected_screen": "rename",
+          "resource_id": "com.tinyburn.reproloop.lab:id/cancel_edit",
+          "visible_text": "Cancel"
+        }
+      ],
+      "intents": [],
+      "source_ids": [
+        "54999d3256c10b3dbe628be8c5c4107be2c7c523",
+        "3bbbd8cb455637bdc9f3b16124d79bf1f37b9ce47503c3d62e5d8e1d543b460f",
+        "Android count = CUA exploration + two controls; source recording excluded"
+      ],
+      "models": [
+        {
+          "provider": "Meta",
+          "name": "muse-spark-1.3",
+          "status": "RECORDED META: one video and four CUA requests"
+        }
+      ],
+      "unknown": [
+        "Trusted host/source bytes, not producer or OS attestation",
+        "Read-only observation branch unused",
+        "One F01 family; old v3 2/5 remains separate"
+      ],
+      "latency_ms": 143182,
+      "cost_usd": null,
+      "png_claims": {
+        "faulty": {
+          "sha256": "9f47eb45fb5ec2bc06f79fed61c30292b7dfc7b5ab6b9abaa1ab250fbce7477c",
+          "label": "FINAL-A-faulty.png"
+        },
+        "fixed": {
+          "sha256": "85d861146036e73c13f885f7bc97c80f5528d93196e1258f14c8e2e5f7eafc60",
+          "label": "FINAL-A-fixed.png"
+        }
+      },
+      "capture": {
+        "width": 720,
+        "height": 1280,
+        "node_count": null,
+        "nodes": []
+      },
+      "reset": {
+        "verified": null,
+        "reason": "This read-only import does not verify reset receipts."
+      },
+      "pair_report": {
+        "verdict": "reproduced_oracle_and_control_confirmed",
+        "model_calls": 0,
+        "files_checked": 81
+      },
+      "faulty": {
+        "failure_observed": true,
+        "completed": true,
+        "model_calls": 0,
+        "build_sha256": "5b7e27d291bf39e10b255c11b32abf6a2f56df89784c0136e5850277764233df"
+      },
+      "fixed": {
+        "failure_observed": false,
+        "completed": true,
+        "model_calls": 0,
+        "build_sha256": "4bcd23747d32429c2c21fd4527bd9a481e6d11376b6b3b1fd27d424378cb3cb6"
+      },
+      "media": {
+        "sha256": "132c66a878fb507c92907956f607e26139d261f43252691bb5dc58f504cd91e9",
+        "label": "FINAL-A-recorded-source.mp4"
+      }
+    },
+    {
+      "case_id": "FINAL-B",
+      "variant": "B",
+      "bug_family": "F01",
+      "file_claim": {
+        "verdict": "SUCCESS \u2014 stored run claim, not a viewer verdict"
+      },
+      "task_steps": [
+        {
+          "expected_screen": "tasks",
+          "resource_id": "com.tinyburn.reproloop.lab:id/task_target",
+          "visible_text": "Target task: Release"
+        },
+        {
+          "expected_screen": "selected",
+          "resource_id": "com.tinyburn.reproloop.lab:id/rename_open",
+          "visible_text": "Rename"
+        },
+        {
+          "expected_screen": "rename",
+          "resource_id": "com.tinyburn.reproloop.lab:id/preset_today",
+          "visible_text": "Today"
+        },
+        {
+          "expected_screen": "rename",
+          "resource_id": "com.tinyburn.reproloop.lab:id/cancel_edit",
+          "visible_text": "Cancel"
+        }
+      ],
+      "intents": [],
+      "source_ids": [
+        "54999d3256c10b3dbe628be8c5c4107be2c7c523",
+        "86963eb6402d49c006db59bee4aa8f38d98437e80d1d22edb622593dd92706b7",
+        "Android count = CUA exploration + two controls; source recording excluded"
+      ],
+      "models": [
+        {
+          "provider": "Meta",
+          "name": "muse-spark-1.3",
+          "status": "RECORDED META: one video and four CUA requests"
+        }
+      ],
+      "unknown": [
+        "Trusted host/source bytes, not producer or OS attestation",
+        "Read-only observation branch unused",
+        "One F01 family; old v3 2/5 remains separate"
+      ],
+      "latency_ms": 144164,
+      "cost_usd": null,
+      "png_claims": {
+        "faulty": {
+          "sha256": "81ef76fcced3a5a8c83872d3b603bd56dc99a70091a0900e14471afdf904dd0b",
+          "label": "FINAL-B-faulty.png"
+        },
+        "fixed": {
+          "sha256": "c3303ff581fd9c99698ce8eaec5c33b640ff1cd2106bf002324e8372377b6d23",
+          "label": "FINAL-B-fixed.png"
+        }
+      },
+      "capture": {
+        "width": 720,
+        "height": 1280,
+        "node_count": null,
+        "nodes": []
+      },
+      "reset": {
+        "verified": null,
+        "reason": "This read-only import does not verify reset receipts."
+      },
+      "pair_report": {
+        "verdict": "reproduced_oracle_and_control_confirmed",
+        "model_calls": 0,
+        "files_checked": 81
+      },
+      "faulty": {
+        "failure_observed": true,
+        "completed": true,
+        "model_calls": 0,
+        "build_sha256": "5b7e27d291bf39e10b255c11b32abf6a2f56df89784c0136e5850277764233df"
+      },
+      "fixed": {
+        "failure_observed": false,
+        "completed": true,
+        "model_calls": 0,
+        "build_sha256": "4bcd23747d32429c2c21fd4527bd9a481e6d11376b6b3b1fd27d424378cb3cb6"
+      },
+      "media": {
+        "sha256": "f8c74b3bccbc480a8e829323c9d483440e39374907a00b28240e52a50a868444",
+        "label": "FINAL-B-recorded-source.mp4"
+      }
+    },
+    {
+      "case_id": "FINAL-C",
+      "variant": "C",
+      "bug_family": "F01",
+      "file_claim": {
+        "verdict": "SUCCESS \u2014 stored run claim, not a viewer verdict"
+      },
+      "task_steps": [
+        {
+          "expected_screen": "tasks",
+          "resource_id": "com.tinyburn.reproloop.lab:id/task_target",
+          "visible_text": "Target task: Release"
+        },
+        {
+          "expected_screen": "selected",
+          "resource_id": "com.tinyburn.reproloop.lab:id/rename_open",
+          "visible_text": "Rename"
+        },
+        {
+          "expected_screen": "rename",
+          "resource_id": "com.tinyburn.reproloop.lab:id/preset_today",
+          "visible_text": "Today"
+        },
+        {
+          "expected_screen": "rename",
+          "resource_id": "com.tinyburn.reproloop.lab:id/cancel_edit",
+          "visible_text": "Cancel"
+        }
+      ],
+      "intents": [],
+      "source_ids": [
+        "54999d3256c10b3dbe628be8c5c4107be2c7c523",
+        "0f2185d91acb8e96ca33339e8dc517a0458aedb674c522bf458a935dae7d565d",
+        "Android count = CUA exploration + two controls; source recording excluded"
+      ],
+      "models": [
+        {
+          "provider": "Meta",
+          "name": "muse-spark-1.3",
+          "status": "RECORDED META: one video and four CUA requests"
+        }
+      ],
+      "unknown": [
+        "Trusted host/source bytes, not producer or OS attestation",
+        "Read-only observation branch unused",
+        "One F01 family; old v3 2/5 remains separate"
+      ],
+      "latency_ms": 147025,
+      "cost_usd": null,
+      "png_claims": {
+        "faulty": {
+          "sha256": "8b759fe2b1556f4a18e0a0ae78190febcd20437e1264b3e656176b3a11289a80",
+          "label": "FINAL-C-faulty.png"
+        },
+        "fixed": {
+          "sha256": "124d889fce51a58bcaac87c9c6f2e2c0e8076eb6ddd53c8e694b989fae35bb90",
+          "label": "FINAL-C-fixed.png"
+        }
+      },
+      "capture": {
+        "width": 720,
+        "height": 1280,
+        "node_count": null,
+        "nodes": []
+      },
+      "reset": {
+        "verified": null,
+        "reason": "This read-only import does not verify reset receipts."
+      },
+      "pair_report": {
+        "verdict": "reproduced_oracle_and_control_confirmed",
+        "model_calls": 0,
+        "files_checked": 81
+      },
+      "faulty": {
+        "failure_observed": true,
+        "completed": true,
+        "model_calls": 0,
+        "build_sha256": "5b7e27d291bf39e10b255c11b32abf6a2f56df89784c0136e5850277764233df"
+      },
+      "fixed": {
+        "failure_observed": false,
+        "completed": true,
+        "model_calls": 0,
+        "build_sha256": "4bcd23747d32429c2c21fd4527bd9a481e6d11376b6b3b1fd27d424378cb3cb6"
+      },
+      "media": {
+        "sha256": "afd7f11e96401e54e5db38636371e872c6e208c4749bdbdc72f9f4f3e55ff0b2",
+        "label": "FINAL-C-recorded-source.mp4"
+      }
+    }
+  ],
+  "illustration": null
+}

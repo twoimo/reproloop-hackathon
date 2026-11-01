@@ -1,0 +1,2 @@
+# Optional pixel-candidate decoder, matching the observed tested runtime.
+Pillow==13.0.0

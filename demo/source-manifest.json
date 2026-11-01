@@ -1,0 +1,305 @@
+{
+  "schema": 1,
+  "source_revision": "54999d3256c10b3dbe628be8c5c4107be2c7c523",
+  "sources": {
+    "aggregate-claims": {
+      "file": "safe-aggregates.json",
+      "sha256": "5ba23e05e993f0cf41ccdd63b8774356db17728ffbd7b560fce74b906abc3b0d",
+      "bytes": 1642,
+      "source_ref": "safe derived pilot, FINAL and read-only ledger aggregate; not attestation"
+    },
+    "source-video": {
+      "file": "captures/source-video.mp4",
+      "sha256": "afd7f11e96401e54e5db38636371e872c6e208c4749bdbdc72f9f4f3e55ff0b2",
+      "bytes": 337957,
+      "source_ref": "clean-viewer/FINAL-C-recorded-source.mp4"
+    },
+    "cua-1": {
+      "file": "captures/cua-1.png",
+      "sha256": "124d889fce51a58bcaac87c9c6f2e2c0e8076eb6ddd53c8e694b989fae35bb90",
+      "bytes": 25127,
+      "source_ref": "FINAL-C/evidence/124d889fce51a58bcaac87c9c6f2e2c0e8076eb6ddd53c8e694b989fae35bb90.png"
+    },
+    "cua-2": {
+      "file": "captures/cua-2.png",
+      "sha256": "c5abc048e71e4686375374d836b241030e78479fdd4a7f37fe5622bf06a5de9f",
+      "bytes": 42539,
+      "source_ref": "FINAL-C/evidence/c5abc048e71e4686375374d836b241030e78479fdd4a7f37fe5622bf06a5de9f.png"
+    },
+    "cua-3": {
+      "file": "captures/cua-3.png",
+      "sha256": "ed191fe74fa0a56d93bd588359e6e537f7adff1fb6bc13188af350bbac95e866",
+      "bytes": 42461,
+      "source_ref": "FINAL-C/evidence/ed191fe74fa0a56d93bd588359e6e537f7adff1fb6bc13188af350bbac95e866.png"
+    },
+    "cua-4": {
+      "file": "captures/cua-4.png",
+      "sha256": "8b759fe2b1556f4a18e0a0ae78190febcd20437e1264b3e656176b3a11289a80",
+      "bytes": 25090,
+      "source_ref": "FINAL-C/evidence/8b759fe2b1556f4a18e0a0ae78190febcd20437e1264b3e656176b3a11289a80.png"
+    },
+    "faulty-1": {
+      "file": "captures/faulty-1.png",
+      "sha256": "124d889fce51a58bcaac87c9c6f2e2c0e8076eb6ddd53c8e694b989fae35bb90",
+      "bytes": 25127,
+      "source_ref": "FINAL-C/evidence/124d889fce51a58bcaac87c9c6f2e2c0e8076eb6ddd53c8e694b989fae35bb90.png"
+    },
+    "faulty-2": {
+      "file": "captures/faulty-2.png",
+      "sha256": "c5abc048e71e4686375374d836b241030e78479fdd4a7f37fe5622bf06a5de9f",
+      "bytes": 42539,
+      "source_ref": "FINAL-C/evidence/c5abc048e71e4686375374d836b241030e78479fdd4a7f37fe5622bf06a5de9f.png"
+    },
+    "faulty-3": {
+      "file": "captures/faulty-3.png",
+      "sha256": "ed191fe74fa0a56d93bd588359e6e537f7adff1fb6bc13188af350bbac95e866",
+      "bytes": 42461,
+      "source_ref": "FINAL-C/evidence/ed191fe74fa0a56d93bd588359e6e537f7adff1fb6bc13188af350bbac95e866.png"
+    },
+    "faulty-4": {
+      "file": "captures/faulty-4.png",
+      "sha256": "8b759fe2b1556f4a18e0a0ae78190febcd20437e1264b3e656176b3a11289a80",
+      "bytes": 25090,
+      "source_ref": "FINAL-C/evidence/8b759fe2b1556f4a18e0a0ae78190febcd20437e1264b3e656176b3a11289a80.png"
+    },
+    "fixed-1": {
+      "file": "captures/fixed-1.png",
+      "sha256": "124d889fce51a58bcaac87c9c6f2e2c0e8076eb6ddd53c8e694b989fae35bb90",
+      "bytes": 25127,
+      "source_ref": "FINAL-C/evidence/124d889fce51a58bcaac87c9c6f2e2c0e8076eb6ddd53c8e694b989fae35bb90.png"
+    },
+    "fixed-2": {
+      "file": "captures/fixed-2.png",
+      "sha256": "c5abc048e71e4686375374d836b241030e78479fdd4a7f37fe5622bf06a5de9f",
+      "bytes": 42539,
+      "source_ref": "FINAL-C/evidence/c5abc048e71e4686375374d836b241030e78479fdd4a7f37fe5622bf06a5de9f.png"
+    },
+    "fixed-3": {
+      "file": "captures/fixed-3.png",
+      "sha256": "ed191fe74fa0a56d93bd588359e6e537f7adff1fb6bc13188af350bbac95e866",
+      "bytes": 42461,
+      "source_ref": "FINAL-C/evidence/ed191fe74fa0a56d93bd588359e6e537f7adff1fb6bc13188af350bbac95e866.png"
+    },
+    "fixed-4": {
+      "file": "captures/fixed-4.png",
+      "sha256": "124d889fce51a58bcaac87c9c6f2e2c0e8076eb6ddd53c8e694b989fae35bb90",
+      "bytes": 25127,
+      "source_ref": "FINAL-C/evidence/124d889fce51a58bcaac87c9c6f2e2c0e8076eb6ddd53c8e694b989fae35bb90.png"
+    }
+  },
+  "segments": [
+    {
+      "start": 0,
+      "end": 18,
+      "source_ids": [
+        "source-video"
+      ],
+      "presentation": "video",
+      "mode": "RECORDED SOURCE VIDEO"
+    },
+    {
+      "start": 18,
+      "end": 28,
+      "source_ids": [
+        "cua-1"
+      ],
+      "presentation": "single",
+      "mode": "RECORDED META"
+    },
+    {
+      "start": 28,
+      "end": 38,
+      "source_ids": [
+        "cua-2"
+      ],
+      "presentation": "single",
+      "mode": "RECORDED META"
+    },
+    {
+      "start": 38,
+      "end": 46,
+      "source_ids": [
+        "cua-1"
+      ],
+      "presentation": "single",
+      "mode": "RECORDED META"
+    },
+    {
+      "start": 46,
+      "end": 53,
+      "source_ids": [
+        "cua-2"
+      ],
+      "presentation": "single",
+      "mode": "RECORDED META"
+    },
+    {
+      "start": 53,
+      "end": 60,
+      "source_ids": [
+        "cua-3"
+      ],
+      "presentation": "single",
+      "mode": "RECORDED META"
+    },
+    {
+      "start": 60,
+      "end": 67,
+      "source_ids": [
+        "cua-4"
+      ],
+      "presentation": "single",
+      "mode": "RECORDED META"
+    },
+    {
+      "start": 67,
+      "end": 75,
+      "source_ids": [
+        "cua-4"
+      ],
+      "presentation": "single",
+      "mode": "RECORDED META"
+    },
+    {
+      "start": 75,
+      "end": 87,
+      "source_ids": [
+        "faulty-4"
+      ],
+      "presentation": "single",
+      "mode": "RECORDED NO-MODEL REPLAY"
+    },
+    {
+      "start": 87,
+      "end": 100,
+      "source_ids": [
+        "cua-2"
+      ],
+      "presentation": "single",
+      "mode": "RECORDED META"
+    },
+    {
+      "start": 100,
+      "end": 108,
+      "source_ids": [
+        "faulty-1"
+      ],
+      "presentation": "single",
+      "mode": "RECORDED NO-MODEL REPLAY"
+    },
+    {
+      "start": 108,
+      "end": 114,
+      "source_ids": [
+        "faulty-1"
+      ],
+      "presentation": "single",
+      "mode": "RECORDED NO-MODEL REPLAY"
+    },
+    {
+      "start": 114,
+      "end": 120,
+      "source_ids": [
+        "faulty-2"
+      ],
+      "presentation": "single",
+      "mode": "RECORDED NO-MODEL REPLAY"
+    },
+    {
+      "start": 120,
+      "end": 125,
+      "source_ids": [
+        "faulty-3"
+      ],
+      "presentation": "single",
+      "mode": "RECORDED NO-MODEL REPLAY"
+    },
+    {
+      "start": 125,
+      "end": 130,
+      "source_ids": [
+        "faulty-4"
+      ],
+      "presentation": "single",
+      "mode": "RECORDED NO-MODEL REPLAY"
+    },
+    {
+      "start": 130,
+      "end": 136,
+      "source_ids": [
+        "fixed-1"
+      ],
+      "presentation": "single",
+      "mode": "RECORDED NO-MODEL REPLAY"
+    },
+    {
+      "start": 136,
+      "end": 142,
+      "source_ids": [
+        "fixed-2"
+      ],
+      "presentation": "single",
+      "mode": "RECORDED NO-MODEL REPLAY"
+    },
+    {
+      "start": 142,
+      "end": 147,
+      "source_ids": [
+        "fixed-3"
+      ],
+      "presentation": "single",
+      "mode": "RECORDED NO-MODEL REPLAY"
+    },
+    {
+      "start": 147,
+      "end": 152,
+      "source_ids": [
+        "fixed-4"
+      ],
+      "presentation": "single",
+      "mode": "RECORDED NO-MODEL REPLAY"
+    },
+    {
+      "start": 152,
+      "end": 158,
+      "source_ids": [
+        "faulty-4",
+        "fixed-4"
+      ],
+      "presentation": "split",
+      "mode": "RECORDED NO-MODEL REPLAY"
+    },
+    {
+      "start": 158,
+      "end": 166,
+      "source_ids": [
+        "aggregate-claims"
+      ],
+      "presentation": "wide",
+      "mode": "RECORDED RESULTS"
+    },
+    {
+      "start": 166,
+      "end": 172,
+      "source_ids": [
+        "aggregate-claims"
+      ],
+      "presentation": "wide",
+      "mode": "RECORDED RESULTS"
+    },
+    {
+      "start": 172,
+      "end": 180,
+      "source_ids": [],
+      "presentation": "wide",
+      "mode": "PRIVATE \u2022 RECORDED EVIDENCE"
+    }
+  ],
+  "limits": [
+    "No producer or native attestation",
+    "No fake touches or physical-tap timestamps",
+    "All sequences use saved original pixels; static holds omit transitions",
+    "No new model/native/network calls"
+  ],
+  "safe_summary_source_sha256": "18410b2a0b8011fea107c85c246e7661cc950135ff116e6e184694b84b7ad6e9"
+}

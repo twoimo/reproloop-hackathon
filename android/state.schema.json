@@ -1,0 +1,188 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "type": "integer",
+      "const": 1
+    },
+    "package": {
+      "type": "string",
+      "const": "com.tinyburn.reproloop.lab"
+    },
+    "build_mode": {
+      "type": "string",
+      "enum": [
+        "faulty",
+        "fixed"
+      ]
+    },
+    "fixture_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9_.:-]+$",
+      "minLength": 1,
+      "maxLength": 64
+    },
+    "fixture_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "seed": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1000000
+    },
+    "layout_variant": {
+      "type": "string",
+      "enum": [
+        "A",
+        "B",
+        "C"
+      ]
+    },
+    "run_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9_.:-]+$",
+      "minLength": 1,
+      "maxLength": 128
+    },
+    "generation": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 2147483647
+    },
+    "fixture": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "fixture_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "minLength": 1,
+          "maxLength": 64
+        },
+        "layout_variant": {
+          "type": "string",
+          "enum": [
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        "non_target_id": {
+          "type": "string",
+          "const": "other"
+        },
+        "non_target_title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 64,
+          "pattern": "^[ -~]+$"
+        },
+        "seed": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000000
+        },
+        "target_id": {
+          "type": "string",
+          "const": "target"
+        },
+        "target_title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 64,
+          "pattern": "^[ -~]+$"
+        }
+      },
+      "required": [
+        "fixture_id",
+        "layout_variant",
+        "non_target_id",
+        "non_target_title",
+        "seed",
+        "target_id",
+        "target_title"
+      ]
+    },
+    "target_id": {
+      "type": "string",
+      "const": "target"
+    },
+    "target_title": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 64,
+      "pattern": "^[ -~]+$"
+    },
+    "non_target_id": {
+      "type": "string",
+      "const": "other"
+    },
+    "non_target_title": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 64,
+      "pattern": "^[ -~]+$"
+    },
+    "sequence": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "cancel_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "cancel_order": {
+      "type": "array",
+      "items": {
+        "type": "integer",
+        "minimum": 1
+      }
+    },
+    "created_at_unix_ms": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "updated_at_unix_ms": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "last_action": {
+      "type": "string",
+      "enum": [
+        "fixture_loaded",
+        "task_open",
+        "rename_open",
+        "select_preset",
+        "cancel_edit",
+        "save_edit",
+        "dismiss_edit"
+      ]
+    }
+  },
+  "required": [
+    "schema_version",
+    "package",
+    "build_mode",
+    "fixture_id",
+    "fixture_sha256",
+    "seed",
+    "layout_variant",
+    "run_id",
+    "generation",
+    "fixture",
+    "target_id",
+    "target_title",
+    "non_target_id",
+    "non_target_title",
+    "sequence",
+    "cancel_count",
+    "cancel_order",
+    "created_at_unix_ms",
+    "updated_at_unix_ms",
+    "last_action"
+  ]
+}

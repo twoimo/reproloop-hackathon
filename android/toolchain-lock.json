@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "tested_jdk": "25.0.3",
+  "kotlin": "2.3.20",
+  "compile_sdk": 34,
+  "build_tools": "34.0.0",
+  "jvm_target": "1.8",
+  "min_sdk": 26,
+  "target_sdk": 34,
+  "observed_installed_sha256": {
+    "kotlin_compiler": "750d9391740efaab854679127e37823e36d28acd59360cd61dc9405ad74a1ad7",
+    "kotlin_stdlib": "0ae12504a5040ebaf37703908483420d1a5624dd1d93f357665f8c77c848a01e",
+    "android_jar": "6cea1df3efb77103ac3e2beb9bf4718964b0e0869ab16d39d29d5cbae1c147ad",
+    "d8_jar": "d43c8a94c9b1f1da1a7cc49c32b81e8cee1708b37ee8b530a81a0688222b42c0",
+    "apksigner_jar": "eefdd6aed9db9fb849e4c98a50d8741e19d1b674ba6547220bcb9c3ed152123a",
+    "aapt2": "22d092d529b050c71016f3f4402f53fadcd358a65fe16df408c400f0fe9ffe62"
+  },
+  "limits": "Hashes are observed installed bytes, not a new publisher signature/download check. No dependencies downloaded."
+}

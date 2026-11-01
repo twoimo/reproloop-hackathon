@@ -1,0 +1,7 @@
+<resources>
+ <item name="task_target" type="id"/><item name="task_other" type="id"/>
+ <item name="rename_open" type="id"/><item name="preset_today" type="id"/>
+ <item name="cancel_edit" type="id"/><item name="save_edit" type="id"/>
+ <item name="back_to_tasks" type="id"/><item name="screen_title" type="id"/>
+ <item name="selected_title" type="id"/>
+</resources>

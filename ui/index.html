@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ReproLoop | Recorded bug workbench</title>
+<meta name="description" content="Inspect a recorded Cancel-persistence bug, compare saved faulty and fixed controls, and trace the source-file evidence. Read-only and unverified.">
+<link rel="stylesheet" href="console.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to the workbench</a>
+<div id="app-shell" data-loaded="false">
+  <header class="top">
+    <div class="container brand-row">
+      <a class="brand" href="#main" aria-label="ReproLoop workbench"><span class="brand-mark" aria-hidden="true"><i></i><i></i></span>ReproLoop</a>
+      <span class="badge">Read-only workbench</span>
+    </div>
+    <div class="container hero">
+      <div class="hero-copy">
+        <p class="status" id="page-title" role="status">No real cases loaded</p>
+        <h1>Cancel should leave<br class="desktop-break"> nothing changed.</h1>
+        <p class="subject">One persistence bug. A recorded path to reproduce it.<br class="desktop-break"> Faulty and fixed controls, side by side.</p>
+        <p class="lead" id="page-lead">Real runs are not run. Load a local JSON file, or open the synthetic sample.</p>
+      </div>
+      <div class="hero-actions">
+        <button type="button" id="recorded-demo" class="primary" disabled>Explore recorded run</button>
+        <p>Saved evidence, not a live device run.</p>
+        <details class="import-menu">
+          <summary>Or inspect your own evidence</summary>
+          <div class="import-content">
+            <label class="file-pick" for="file">Load local JSON
+              <input id="file" type="file" accept="application/json,.json">
+            </label>
+            <div class="actions">
+              <button type="button" id="demo">Open synthetic sample</button>
+              <button type="button" id="clear">Clear workspace</button>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+    <div class="container trust-bar">
+      <p id="mode-line">Real state: not run.</p>
+      <p id="trust-line">Trust: unverified. This page does not issue a verdict.</p>
+    </div>
+    <div class="container"><ul id="errors" role="alert" aria-label="Import errors"></ul></div>
+  </header>
+  <nav class="views" aria-label="Workbench sections">
+    <div class="container view-row">
+      <button type="button" data-view="intake" aria-current="true">Overview</button>
+      <button type="button" data-view="cases">Cases</button>
+      <button type="button" data-view="evidence">Compare evidence</button>
+      <button type="button" data-view="demo">Presenter notes</button>
+    </div>
+  </nav>
+  <main id="main">
+    <section id="view-intake" class="container overview">
+      <div class="section-heading">
+        <div><p class="section-label">The case for a replay</p><h2 tabindex="-1">A small action.<br>A persistent mistake.</h2></div>
+        <p>F01 is a rename-and-Cancel bug. Inspect the saved action path, then compare the faulty build with a developer-supplied fixed control.</p>
+      </div>
+      <div class="intro-rail" aria-label="Cancel persistence behavior">
+        <div class="rule-start"><span class="rail-label">The action</span><strong>Edit a title.<br>Then press Cancel.</strong><p>No save was requested.</p></div>
+        <div class="rule-outcome"><span class="rail-label">Expected behavior</span><strong>The stored title stays.</strong><p>Dismiss the edit without persisting it.</p></div>
+        <div class="rule-outcome faulty"><span class="rail-label">The bug to inspect</span><strong>Did the edit persist?</strong><p>The recorded comparison is the evidence to examine, not a new execution.</p></div>
+      </div>
+      <div class="overview-bottom">
+        <div><h3>Follow the evidence, not a verdict.</h3><p>Explore the bundled recording or load your own case. Inspect saved frames, compare the controls, and open source details when you need them.</p></div>
+        <div class="boundary-note"><span class="badge">Scope stays bounded</span><p>No live device actions, model calls or automatic repairs. The fixed code is developer supplied with AI assistance. Imported results remain file claims.</p></div>
+      </div>
+    </section>
+    <section id="view-cases" class="container" hidden>
+      <div class="section-heading"><div><p class="section-label">Choose the evidence</p><h2 tabindex="-1">Recorded cases</h2></div><p>A case row is a source-file claim, not a backend verdict. An empty list means nothing has run; planned ids are not results.</p></div>
+      <ul id="case-list" class="case-list"></ul>
+    </section>
+    <section id="view-evidence" class="container" hidden>
+      <div class="section-heading compare-heading">
+        <div><p class="section-label" id="comparison-family">Read-only file / unverified</p><h2 id="comparison-heading" tabindex="-1">Inspect the selected case.</h2></div>
+        <span class="badge">Recorded evidence / unverified</span>
+      </div>
+      <div class="compare-toolbar">
+        <label class="case-picker" for="case-select">Case <select id="case-select"><option value="">No case row</option></select></label>
+        <p id="media-mode">No media loaded.</p>
+        <button type="button" id="clear-preview" class="quiet">Clear local previews</button>
+      </div>
+      <div class="workspace">
+
+        <div class="comparison">
+          <div class="diff-rail"><span>Paired-control comparison</span><strong id="comparison-expectation">Task and oracle text are file claims.</strong></div>
+          <div class="split-stage">
+            <article class="control-card faulty-control">
+              <div class="control-heading"><h3><span class="control-dot" aria-hidden="true"></span>Faulty build</h3><span class="control-kind">Saved replay</span></div>
+              <div class="stage" id="preview-stage-one" role="region" aria-label="Faulty build saved image"></div>
+              <details class="media-claim"><summary>Image source and byte claim</summary><p id="preview-line-one">No first local image is attached.</p></details>
+            </article>
+            <article class="control-card fixed-control">
+              <div class="control-heading"><h3><span class="control-dot" aria-hidden="true"></span>Fixed control</h3><span class="control-kind">Developer supplied</span></div>
+              <div class="stage" id="preview-stage-two" role="region" aria-label="Fixed control saved image"></div>
+              <details class="media-claim"><summary>Image source and byte claim</summary><p id="preview-line-two">No second local image is attached.</p></details>
+            </article>
+          </div>
+          <p id="compare-note" class="compare-note" role="status">Load a case to inspect its saved faulty and fixed images. File claims remain unverified.</p>
+        </div>
+        <aside class="action-panel" aria-labelledby="actions-heading">
+          <div class="panel-heading"><h3 id="actions-heading">Saved action path</h3><span class="badge small">Read only</span></div>
+          <p class="muted">Inspect recorded actions. Nothing here taps a device.</p>
+          <ol id="action-list" class="action-list"><li class="empty-action">Load the recorded run to inspect its saved actions.</li></ol>
+          <div class="step-navigation" aria-label="Saved frame navigation">
+            <p id="walkthrough-step-label" role="status">No recorded step selected.</p>
+            <div class="actions"><button type="button" id="step-prev" disabled>Previous step</button><button type="button" id="step-next" disabled>Next step</button></div>
+          </div>
+          <p class="step-scope">Step playback is available only where post-action frames were saved. Other cases show end states.</p>
+        </aside>
+      </div>
+      <div class="source-section">
+        <div class="source-copy"><p class="section-label">Return to the recording</p><h3>Watch the source context.</h3><p>The source video is a recording, not a live execution. Playback starts muted. Saved frames and video remain separate evidence items.</p><span class="badge">Recorded / muted by default</span></div>
+        <div class="video-card"><div class="stage video-stage" id="preview-stage-video" role="region" aria-label="Source recording"></div><details class="media-claim"><summary>Video source and byte claim</summary><p id="preview-line-video">No local video is attached.</p></details></div>
+      </div>
+      <div class="evidence-details">
+        <details class="disclosure"><summary><span>Attach independent local media</span><span class="summary-hint">Images and video</span></summary><div class="disclosure-body"><p>Each preview is its own local file. Two images are not one input. A byte match is only a hash comparison, not attestation.</p><div class="attachment-grid"><label class="file-pick" for="image-file">Faulty replay image (local)<input id="image-file" type="file" accept="image/*"></label><label class="file-pick" for="image-file-two">Fixed replay image (local)<input id="image-file-two" type="file" accept="image/*"></label><label class="file-pick" for="video-file">Local video<input id="video-file" type="file" accept="video/*"></label></div></div></details>
+        <details class="disclosure"><summary><span>Inspect the evidence record</span><span class="summary-hint">Source fields and capture nodes</span></summary><div class="disclosure-body"><p>A file claim is shown as text. It is not a confirmation. Missing scores remain missing.</p><div id="evidence-body" class="grid"></div><h3>Capture nodes</h3><ol id="node-list"></ol></div></details>
+      </div>
+    </section>
+    <section id="view-demo" class="container" hidden>
+      <div class="section-heading"><div><p class="section-label">Presentation companion</p><h2 tabindex="-1">Keep the story grounded.</h2></div><p>These are presenter notes, not playback progress or measured time. Keep the recording and its source claims distinct from a fresh run.</p></div>
+      <article class="presenter-card"><div class="beat-meta"><p id="beat-index">1 of 7</p><p id="beat-when">0 to 18 seconds</p></div><p id="beat-line">Show a self-owned synthetic recording. Counts stay at zero.</p><div class="actions"><button type="button" id="beat-prev">Previous beat</button><button type="button" id="beat-next">Next beat</button></div></article>
+      <p class="muted presenter-note">Elapsed time is not measured here. Do not read a worked fraction as a pilot result.</p>
+    </section>
+    <div class="container corpus-section">
+      <details class="disclosure"><summary><span>Cohort and execution boundaries</span><span class="summary-hint">Counts, scores and capabilities</span></summary><div class="disclosure-body">
+        <p id="cohort-line">Cohort: legacy-pilot / PILOT. No real cases loaded.</p><p>Unknown counts only attempted cases still unresolved. Planned cases that were not started are not run. Counts from separate cohorts are not combined.</p>
+        <div class="grid corpus-grid"><p class="pair-key">Planned ids</p><p id="planned">P01, P02, P03, P04, P05</p><p class="pair-key">Attempted</p><p id="attempted">0</p><p class="pair-key">Known outcomes</p><p id="complete">0</p><p class="pair-key">Not run</p><p id="not-run">5</p><p class="pair-key">Unknown outcomes</p><p id="unknown">0</p><p class="pair-key">Excluded</p><p id="excluded">0</p><p class="pair-key">Backend-verified pairs</p><p id="pairs">not recorded</p><p class="pair-key">File-claimed calls</p><p id="calls">0</p></div>
+        <div class="held"><div><button type="button" disabled>Dispatch to an emulator</button><p>Unavailable. This page has no device driver.</p></div><div><button type="button" disabled>Call a model</button><p>Unavailable. This page has no Meta client.</p></div></div>
+      </div></details>
+    </div>
+  </main>
+  <footer><div class="container footer-row"><p class="footer-brand">ReproLoop</p><p>Inspect the recording. Trace the claim.<br>Imported JSON stays unverified until a trusted backend checks raw proof.</p><p class="footer-scope">Read-only. No device or model execution.</p></div></footer>
+</div>
+<noscript><p class="container">Scripting is off. Real runs are still not run, and this page still does not issue a verdict.</p></noscript>
+<script type="module" src="app.js"></script>
+</body>
+</html>

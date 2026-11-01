@@ -1,0 +1,65 @@
+{
+  "schema": "reproloop.evidence.v1",
+  "evidence_level": "SYNTHETIC_MOCK_TESTED",
+  "mode": "synthetic",
+  "meta_calls": 0,
+  "android_runs": 0,
+  "video_calls": 0,
+  "cua_calls": 0,
+  "pilot": {
+    "planned_case_ids": ["P01", "P02", "P03", "P04", "P05"],
+    "attempted": 0,
+    "complete": 0,
+    "unknown": 0,
+    "excluded": 0,
+    "not_run_ids": ["P01", "P02", "P03", "P04", "P05"],
+    "valid_export_pairs": null,
+    "fixed_failure_signals": null,
+    "invalid_confirmations": null,
+    "note": "Plan denominator only. This file is not a pilot result."
+  },
+  "cases": [],
+  "illustration": {
+    "not_a_pilot_row": true,
+    "case_id": "F01-illustration",
+    "variant": "B",
+    "bug_family": "F01_rename_cancel_persistence",
+    "media": {
+      "label": "Owned synthetic recording, not attached",
+      "sha256": null,
+      "duration_s": null
+    },
+    "intents": [
+      {"t": "0.0", "text": "Open the task named Inbox"},
+      {"t": "1.2", "text": "Choose the Today preset"},
+      {"t": "2.4", "text": "Press Cancel"}
+    ],
+    "exploration": {
+      "model_calls": 0,
+      "steps": []
+    },
+    "faulty": {
+      "run_id": null,
+      "build_sha256": null,
+      "reset_verified": null,
+      "no_llm": null,
+      "workflow_complete": null,
+      "failure_observed": null
+    },
+    "fixed": {
+      "run_id": null,
+      "build_sha256": null,
+      "reset_verified": null,
+      "no_llm": null,
+      "workflow_complete": null,
+      "failure_observed": null
+    },
+    "file_claim": {
+      "verdict": null,
+      "reason": "No pair was judged in this illustration."
+    },
+    "cost_usd": null,
+    "latency_ms": null,
+    "unknown": ["video", "files", "cua", "android", "oracle log bytes"]
+  }
+}

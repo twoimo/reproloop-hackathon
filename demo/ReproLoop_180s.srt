@@ -1,0 +1,91 @@
+1
+00:00:00,000 --> 00:00:18,000
+This self-owned synthetic app saves the draft title after Cancel.
+
+2
+00:00:18,000 --> 00:00:28,000
+The recorded Meta input combines video, uniform frames, pointer pixels and OCR.
+
+3
+00:00:28,000 --> 00:00:38,000
+Model intent proposes actions. A separate predeclared oracle checks the result.
+
+4
+00:00:38,000 --> 00:00:46,000
+Recorded CUA step 1: select the task.
+
+5
+00:00:46,000 --> 00:00:53,000
+Recorded CUA step 2: open Rename.
+
+6
+00:00:53,000 --> 00:01:00,000
+Recorded CUA step 3: choose Today.
+
+7
+00:01:00,000 --> 00:01:07,000
+Recorded CUA step 4: press Cancel.
+
+8
+00:01:07,000 --> 00:01:15,000
+The title is Today after Cancel. The control pair is still required.
+
+9
+00:01:15,000 --> 00:01:27,000
+The independent persisted-state and event oracle reports the faulty signal.
+
+10
+00:01:27,000 --> 00:01:40,000
+Sampled-context consistency is not physical-tap proof. The optional read-only branch was unused.
+
+11
+00:01:40,000 --> 00:01:48,000
+Export four semantic steps once. Replay the exact same export on fresh faulty and fixed builds.
+
+12
+00:01:48,000 --> 00:01:54,000
+Faulty model-free replay: select task.
+
+13
+00:01:54,000 --> 00:02:00,000
+Faulty model-free replay: open rename.
+
+14
+00:02:00,000 --> 00:02:05,000
+Faulty model-free replay: choose today.
+
+15
+00:02:05,000 --> 00:02:10,000
+Faulty model-free replay: cancel.
+
+16
+00:02:10,000 --> 00:02:16,000
+Fixed model-free replay: select task.
+
+17
+00:02:16,000 --> 00:02:22,000
+Fixed model-free replay: open rename.
+
+18
+00:02:22,000 --> 00:02:27,000
+Fixed model-free replay: choose today.
+
+19
+00:02:27,000 --> 00:02:32,000
+Fixed model-free replay: cancel.
+
+20
+00:02:32,000 --> 00:02:38,000
+The developer-supplied fixed control keeps Release. Faulty is true; fixed is false.
+
+21
+00:02:38,000 --> 00:02:46,000
+Original pilot: two of five, below target. Separate FINAL: three of three correlated variants.
+
+22
+00:02:46,000 --> 00:02:52,000
+Each FINAL case used five model calls and two model-free controls. Upload fees remain unpriced.
+
+23
+00:02:52,000 --> 00:03:00,000
+Private prototype. Not release approved. Generalization has not been evaluated.

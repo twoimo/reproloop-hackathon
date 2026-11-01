@@ -1,0 +1,133 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "type": "integer",
+      "const": 1
+    },
+    "package": {
+      "type": "string",
+      "const": "com.tinyburn.reproloop.lab"
+    },
+    "build_mode": {
+      "type": "string",
+      "enum": [
+        "faulty",
+        "fixed"
+      ]
+    },
+    "fixture_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9_.:-]+$",
+      "minLength": 1,
+      "maxLength": 64
+    },
+    "fixture_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "seed": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1000000
+    },
+    "layout_variant": {
+      "type": "string",
+      "enum": [
+        "A",
+        "B",
+        "C"
+      ]
+    },
+    "run_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9_.:-]+$",
+      "minLength": 1,
+      "maxLength": 128
+    },
+    "generation": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 2147483647
+    },
+    "sequence": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "timestamp_unix_ms": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "action": {
+      "type": "string",
+      "enum": [
+        "fixture_loaded",
+        "task_open",
+        "rename_open",
+        "select_preset",
+        "cancel_edit",
+        "save_edit",
+        "dismiss_edit"
+      ]
+    },
+    "task_id": {
+      "type": "string",
+      "enum": [
+        "",
+        "target",
+        "other"
+      ]
+    },
+    "before_title": {
+      "type": "string",
+      "maxLength": 64
+    },
+    "draft_title": {
+      "type": "string",
+      "maxLength": 64
+    },
+    "after_title": {
+      "type": "string",
+      "maxLength": 64
+    },
+    "cancel_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "target_title": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 64,
+      "pattern": "^[ -~]+$"
+    },
+    "non_target_title": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 64,
+      "pattern": "^[ -~]+$"
+    }
+  },
+  "required": [
+    "schema_version",
+    "package",
+    "build_mode",
+    "fixture_id",
+    "fixture_sha256",
+    "seed",
+    "layout_variant",
+    "run_id",
+    "generation",
+    "sequence",
+    "timestamp_unix_ms",
+    "action",
+    "task_id",
+    "before_title",
+    "draft_title",
+    "after_title",
+    "cancel_count",
+    "target_title",
+    "non_target_title"
+  ]
+}

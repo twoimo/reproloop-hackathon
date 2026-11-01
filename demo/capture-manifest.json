@@ -1,0 +1,104 @@
+{
+  "schema": 1,
+  "device_alias": "LAB-ANDROID-1",
+  "case": "FINAL-C",
+  "presentation": "Saved actual captures; transitions omitted; no synthetic touches",
+  "captures": {
+    "cua-1": {
+      "file": "captures/cua-1.png",
+      "sha256": "124d889fce51a58bcaac87c9c6f2e2c0e8076eb6ddd53c8e694b989fae35bb90",
+      "bytes": 25127,
+      "source_ref": "FINAL-C/evidence/124d889fce51a58bcaac87c9c6f2e2c0e8076eb6ddd53c8e694b989fae35bb90.png"
+    },
+    "cua-2": {
+      "file": "captures/cua-2.png",
+      "sha256": "c5abc048e71e4686375374d836b241030e78479fdd4a7f37fe5622bf06a5de9f",
+      "bytes": 42539,
+      "source_ref": "FINAL-C/evidence/c5abc048e71e4686375374d836b241030e78479fdd4a7f37fe5622bf06a5de9f.png"
+    },
+    "cua-3": {
+      "file": "captures/cua-3.png",
+      "sha256": "ed191fe74fa0a56d93bd588359e6e537f7adff1fb6bc13188af350bbac95e866",
+      "bytes": 42461,
+      "source_ref": "FINAL-C/evidence/ed191fe74fa0a56d93bd588359e6e537f7adff1fb6bc13188af350bbac95e866.png"
+    },
+    "cua-4": {
+      "file": "captures/cua-4.png",
+      "sha256": "8b759fe2b1556f4a18e0a0ae78190febcd20437e1264b3e656176b3a11289a80",
+      "bytes": 25090,
+      "source_ref": "FINAL-C/evidence/8b759fe2b1556f4a18e0a0ae78190febcd20437e1264b3e656176b3a11289a80.png"
+    },
+    "faulty-1": {
+      "file": "captures/faulty-1.png",
+      "sha256": "124d889fce51a58bcaac87c9c6f2e2c0e8076eb6ddd53c8e694b989fae35bb90",
+      "bytes": 25127,
+      "source_ref": "FINAL-C/evidence/124d889fce51a58bcaac87c9c6f2e2c0e8076eb6ddd53c8e694b989fae35bb90.png"
+    },
+    "faulty-2": {
+      "file": "captures/faulty-2.png",
+      "sha256": "c5abc048e71e4686375374d836b241030e78479fdd4a7f37fe5622bf06a5de9f",
+      "bytes": 42539,
+      "source_ref": "FINAL-C/evidence/c5abc048e71e4686375374d836b241030e78479fdd4a7f37fe5622bf06a5de9f.png"
+    },
+    "faulty-3": {
+      "file": "captures/faulty-3.png",
+      "sha256": "ed191fe74fa0a56d93bd588359e6e537f7adff1fb6bc13188af350bbac95e866",
+      "bytes": 42461,
+      "source_ref": "FINAL-C/evidence/ed191fe74fa0a56d93bd588359e6e537f7adff1fb6bc13188af350bbac95e866.png"
+    },
+    "faulty-4": {
+      "file": "captures/faulty-4.png",
+      "sha256": "8b759fe2b1556f4a18e0a0ae78190febcd20437e1264b3e656176b3a11289a80",
+      "bytes": 25090,
+      "source_ref": "FINAL-C/evidence/8b759fe2b1556f4a18e0a0ae78190febcd20437e1264b3e656176b3a11289a80.png"
+    },
+    "fixed-1": {
+      "file": "captures/fixed-1.png",
+      "sha256": "124d889fce51a58bcaac87c9c6f2e2c0e8076eb6ddd53c8e694b989fae35bb90",
+      "bytes": 25127,
+      "source_ref": "FINAL-C/evidence/124d889fce51a58bcaac87c9c6f2e2c0e8076eb6ddd53c8e694b989fae35bb90.png"
+    },
+    "fixed-2": {
+      "file": "captures/fixed-2.png",
+      "sha256": "c5abc048e71e4686375374d836b241030e78479fdd4a7f37fe5622bf06a5de9f",
+      "bytes": 42539,
+      "source_ref": "FINAL-C/evidence/c5abc048e71e4686375374d836b241030e78479fdd4a7f37fe5622bf06a5de9f.png"
+    },
+    "fixed-3": {
+      "file": "captures/fixed-3.png",
+      "sha256": "ed191fe74fa0a56d93bd588359e6e537f7adff1fb6bc13188af350bbac95e866",
+      "bytes": 42461,
+      "source_ref": "FINAL-C/evidence/ed191fe74fa0a56d93bd588359e6e537f7adff1fb6bc13188af350bbac95e866.png"
+    },
+    "fixed-4": {
+      "file": "captures/fixed-4.png",
+      "sha256": "124d889fce51a58bcaac87c9c6f2e2c0e8076eb6ddd53c8e694b989fae35bb90",
+      "bytes": 25127,
+      "source_ref": "FINAL-C/evidence/124d889fce51a58bcaac87c9c6f2e2c0e8076eb6ddd53c8e694b989fae35bb90.png"
+    }
+  },
+  "controls": {
+    "faulty": {
+      "model_calls": 0,
+      "complete": true,
+      "failure_observed": true,
+      "script_sha256": "0f2185d91acb8e96ca33339e8dc517a0458aedb674c522bf458a935dae7d565d",
+      "oracle": "cancel_preserves_stored_title",
+      "source_replay_sha256": "f247baf6f8fb340010994fb6d5d5a93cc3468835fc5aa75b235990b40451e86a",
+      "source_trace_sha256": "78abc3c350a0a15ed1c13564964eaf59ea99276b375489acf988890a349a1336"
+    },
+    "fixed": {
+      "model_calls": 0,
+      "complete": true,
+      "failure_observed": false,
+      "script_sha256": "0f2185d91acb8e96ca33339e8dc517a0458aedb674c522bf458a935dae7d565d",
+      "oracle": "cancel_preserves_stored_title",
+      "source_replay_sha256": "95b96a706c25948595536bfa06fc2d05bc4a3dc7b4ffd9f72d627e8f2dee61d5",
+      "source_trace_sha256": "cfa43a7cf1b33e0a2e000ca1444c219ccaef5287aeb5ca97b3b3983eba720b84"
+    }
+  },
+  "limits": [
+    "Native capture consistency is not atomicity or OS attestation",
+    "PNG hashes may recur across separate runs when the pixels match; stage identity comes from separate recorded traces"
+  ]
+}

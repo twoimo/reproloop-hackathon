@@ -1,0 +1,57 @@
+{
+  "schema": 1,
+  "kind": "SAFE_RECORDED_AGGREGATES_NOT_PRODUCER_ATTESTATION",
+  "original_pilot": {
+    "id": "v3",
+    "denominator": 5,
+    "attempted": 5,
+    "successes": 2,
+    "known_failed": 3,
+    "unknown": 0,
+    "target_minimum": 3
+  },
+  "final_cohort": {
+    "id": "v4obs1-FINAL",
+    "denominator": 3,
+    "attempted": 3,
+    "successes": 3,
+    "known_failed": 0,
+    "unknown": 0,
+    "fault_families": 1,
+    "correlated_variants": 3
+  },
+  "per_final": {
+    "model_calls": 5,
+    "accepted_inputs": 4,
+    "control_runs": 2,
+    "read_only_observations": 0
+  },
+  "budget": {
+    "inference_calls": 54,
+    "call_cap": 60,
+    "uploads": 12,
+    "known_token_fees_nano_usd": 1030238000,
+    "upload_price": "UNPRICED",
+    "not_final_billing": true
+  },
+  "source_refs": {
+    "pilot": {
+      "logical_name": "PILOT_V3_RECORDED_BATCH_SUMMARY",
+      "sha256": "e760fcd0d8eadb768c68581259b2ad7fb537a4635616d41d91dfb0872117919d"
+    },
+    "final": {
+      "logical_name": "FINAL_V4OBS1_RECORDED_BATCH_SUMMARY",
+      "sha256": "20d91b685493a2f7f489003e23274538959448438ad01d3b32c2cc470cc1b3d0"
+    },
+    "ledger": {
+      "logical_name": "READ_ONLY_ORIGINAL_LEDGER_ORDERED_KIND_STATE_RESERVED_COST_ROWS",
+      "aggregate_sha256": "847a75f9950238463b3b5967d193bb4b84e0e8d77a9fbe43d1c6aaeca12bcfbd"
+    }
+  },
+  "limits": [
+    "Derived allowlisted local records, no host path or runtime owner identity",
+    "Source hashes bind bytes, not authenticity or physical/OS attestation",
+    "Original pilot and separate FINAL are never pooled",
+    "No B1 superiority, independent bug population or final-billing claim"
+  ]
+}

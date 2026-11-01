@@ -1,0 +1,13 @@
+{
+  "catalog_sha256": "20f6368b83058d4cb887fad514c4d69211bb3279d914f4ccb55989a7a01113b7",
+  "ci_completed": false,
+  "evidence_trust": "UNVERIFIED",
+  "final": "3/3_CORRELATED_SEPARATE",
+  "final_rights_clearance": false,
+  "kind": "REPROLOOP_PUBLIC_PREPARATION_V1",
+  "new_native_or_model_calls": 0,
+  "pilot": "2/5",
+  "project_license_scope": "MIT_REPROLOOP_OWNED_SOURCE_ONLY",
+  "public_release_approved": false,
+  "review_status": "SUPPLIED_DECLARATIONS_ONLY"
+}

@@ -1,0 +1,414 @@
+[
+  {
+    "start": 0,
+    "end": 18,
+    "title": "Cancel should mean cancel.",
+    "body": [
+      "A bug video is not a regression test.",
+      "Release \u2192 Today \u2192 Cancel",
+      "Expected: keep Release. Actual: Today."
+    ],
+    "caption": "This self-owned synthetic app saves the draft title after Cancel.",
+    "mode": "RECORDED SOURCE VIDEO",
+    "image": "source-video",
+    "extra": "Original recording \u2022 1.731x playback \u2022 no audio",
+    "kind": "video",
+    "source_ids": [
+      "source-video"
+    ]
+  },
+  {
+    "start": 18,
+    "end": 28,
+    "title": "Start with the real recording.",
+    "body": [
+      "Meta muse-spark-1.3",
+      "VIDEO + 12 uniform frames",
+      "Native pointer pixels + temporal OCR"
+    ],
+    "caption": "The recorded Meta input combines video, uniform frames, pointer pixels and OCR.",
+    "mode": "RECORDED META",
+    "image": "cua-1",
+    "extra": "FINAL-C \u2022 source SHA-256 afd7f11e \u2022 LAB-ANDROID-1",
+    "kind": "single",
+    "source_ids": [
+      "cua-1"
+    ]
+  },
+  {
+    "start": 28,
+    "end": 38,
+    "title": "A candidate, not a verdict.",
+    "body": [
+      "Video intent proposes the workflow.",
+      "Predeclared invariant: Cancel preserves stored title.",
+      "The independent oracle judges later."
+    ],
+    "caption": "Model intent proposes actions. A separate predeclared oracle checks the result.",
+    "mode": "RECORDED META",
+    "image": "cua-2",
+    "extra": "No new inference during this demo",
+    "kind": "single",
+    "source_ids": [
+      "cua-2"
+    ]
+  },
+  {
+    "start": 38,
+    "end": 46,
+    "title": "01  Select the task.",
+    "body": [
+      "Fresh screenshot \u2192 native pixel input",
+      "Recorded CUA: 4 model calls total."
+    ],
+    "caption": "Recorded CUA step 1: select the task.",
+    "mode": "RECORDED META",
+    "image": "cua-1",
+    "extra": "RECORDED FRAME SEQUENCE; transitions omitted",
+    "kind": "single",
+    "source_ids": [
+      "cua-1"
+    ]
+  },
+  {
+    "start": 46,
+    "end": 53,
+    "title": "02  Open Rename.",
+    "body": [
+      "Fresh screenshot, not copied video coordinates",
+      "Recorded CUA: 4 model calls total."
+    ],
+    "caption": "Recorded CUA step 2: open Rename.",
+    "mode": "RECORDED META",
+    "image": "cua-2",
+    "extra": "RECORDED FRAME SEQUENCE; transitions omitted",
+    "kind": "single",
+    "source_ids": [
+      "cua-2"
+    ]
+  },
+  {
+    "start": 53,
+    "end": 60,
+    "title": "03  Set the draft to Today.",
+    "body": [
+      "Accepted input checked by fresh readback",
+      "Recorded CUA: 4 model calls total."
+    ],
+    "caption": "Recorded CUA step 3: choose Today.",
+    "mode": "RECORDED META",
+    "image": "cua-3",
+    "extra": "RECORDED FRAME SEQUENCE; transitions omitted",
+    "kind": "single",
+    "source_ids": [
+      "cua-3"
+    ]
+  },
+  {
+    "start": 60,
+    "end": 67,
+    "title": "04  Press Cancel.",
+    "body": [
+      "Four native CUA inputs accepted",
+      "Recorded CUA: 4 model calls total."
+    ],
+    "caption": "Recorded CUA step 4: press Cancel.",
+    "mode": "RECORDED META",
+    "image": "cua-4",
+    "extra": "RECORDED FRAME SEQUENCE; transitions omitted",
+    "kind": "single",
+    "source_ids": [
+      "cua-4"
+    ]
+  },
+  {
+    "start": 67,
+    "end": 75,
+    "title": "The title changed anyway.",
+    "body": [
+      "Fault candidate observed.",
+      "A model saying \u201cdone\u201d is not proof.",
+      "Fresh faulty/fixed controls are still required."
+    ],
+    "caption": "The title is Today after Cancel. The control pair is still required.",
+    "mode": "RECORDED META",
+    "image": "cua-4",
+    "extra": "RECORDED FRAME SEQUENCE; transitions omitted",
+    "kind": "single",
+    "source_ids": [
+      "cua-4"
+    ]
+  },
+  {
+    "start": 75,
+    "end": 87,
+    "title": "Judge persisted state + events.",
+    "body": [
+      "Oracle: cancel_preserves_stored_title",
+      "Faulty replay: completed; failure = true.",
+      "Not a screenshot-similarity score."
+    ],
+    "caption": "The independent persisted-state and event oracle reports the faulty signal.",
+    "mode": "RECORDED NO-MODEL REPLAY",
+    "image": "faulty-4",
+    "extra": "Saved oracle summary \u2022 actual replay capture",
+    "kind": "single",
+    "source_ids": [
+      "faulty-4"
+    ]
+  },
+  {
+    "start": 87,
+    "end": 100,
+    "title": "Keep the evidence boundary clear.",
+    "body": [
+      "FINAL-C: sampled pointer context.",
+      "Consistent context, not causal proof.",
+      "Read-only observations used: 0."
+    ],
+    "caption": "Sampled-context consistency is not physical-tap proof. The optional read-only branch was unused.",
+    "mode": "RECORDED META",
+    "image": "cua-2",
+    "extra": "Saved-frame montage, not end-to-end elapsed time",
+    "kind": "single",
+    "source_ids": [
+      "cua-2"
+    ]
+  },
+  {
+    "start": 100,
+    "end": 108,
+    "title": "Export semantics once.",
+    "body": [
+      "Target task: Release",
+      "Rename \u2192 Today \u2192 Cancel",
+      "Same export on both fresh controls."
+    ],
+    "caption": "Export four semantic steps once. Replay the exact same export on fresh faulty and fixed builds.",
+    "mode": "RECORDED NO-MODEL REPLAY",
+    "image": "faulty-1",
+    "extra": "Export 0f2185d9 \u2022 fixture 4c557c97 \u2022 model calls 0",
+    "kind": "single",
+    "source_ids": [
+      "faulty-1"
+    ]
+  },
+  {
+    "start": 108,
+    "end": 114,
+    "title": "Faulty control  1/4",
+    "body": [
+      "Select task",
+      "Fresh reset \u2022 model calls 0",
+      "Failure signal: true after completion."
+    ],
+    "caption": "Faulty model-free replay: select task.",
+    "mode": "RECORDED NO-MODEL REPLAY",
+    "image": "faulty-1",
+    "extra": "RECORDED FRAME SEQUENCE; transitions omitted",
+    "kind": "single",
+    "source_ids": [
+      "faulty-1"
+    ]
+  },
+  {
+    "start": 114,
+    "end": 120,
+    "title": "Faulty control  2/4",
+    "body": [
+      "Open Rename",
+      "Fresh reset \u2022 model calls 0",
+      "Failure signal: true after completion."
+    ],
+    "caption": "Faulty model-free replay: open rename.",
+    "mode": "RECORDED NO-MODEL REPLAY",
+    "image": "faulty-2",
+    "extra": "RECORDED FRAME SEQUENCE; transitions omitted",
+    "kind": "single",
+    "source_ids": [
+      "faulty-2"
+    ]
+  },
+  {
+    "start": 120,
+    "end": 125,
+    "title": "Faulty control  3/4",
+    "body": [
+      "Choose Today",
+      "Fresh reset \u2022 model calls 0",
+      "Failure signal: true after completion."
+    ],
+    "caption": "Faulty model-free replay: choose today.",
+    "mode": "RECORDED NO-MODEL REPLAY",
+    "image": "faulty-3",
+    "extra": "RECORDED FRAME SEQUENCE; transitions omitted",
+    "kind": "single",
+    "source_ids": [
+      "faulty-3"
+    ]
+  },
+  {
+    "start": 125,
+    "end": 130,
+    "title": "Faulty control  4/4",
+    "body": [
+      "Cancel",
+      "Fresh reset \u2022 model calls 0",
+      "Failure signal: true after completion."
+    ],
+    "caption": "Faulty model-free replay: cancel.",
+    "mode": "RECORDED NO-MODEL REPLAY",
+    "image": "faulty-4",
+    "extra": "RECORDED FRAME SEQUENCE; transitions omitted",
+    "kind": "single",
+    "source_ids": [
+      "faulty-4"
+    ]
+  },
+  {
+    "start": 130,
+    "end": 136,
+    "title": "Fixed control  1/4",
+    "body": [
+      "Select task",
+      "Same export \u2022 fresh reset \u2022 model calls 0",
+      "Developer-supplied fixed control; not ReproLoop repair."
+    ],
+    "caption": "Fixed model-free replay: select task.",
+    "mode": "RECORDED NO-MODEL REPLAY",
+    "image": "fixed-1",
+    "extra": "RECORDED FRAME SEQUENCE; transitions omitted",
+    "kind": "single",
+    "source_ids": [
+      "fixed-1"
+    ]
+  },
+  {
+    "start": 136,
+    "end": 142,
+    "title": "Fixed control  2/4",
+    "body": [
+      "Open Rename",
+      "Same export \u2022 fresh reset \u2022 model calls 0",
+      "Developer-supplied fixed control; not ReproLoop repair."
+    ],
+    "caption": "Fixed model-free replay: open rename.",
+    "mode": "RECORDED NO-MODEL REPLAY",
+    "image": "fixed-2",
+    "extra": "RECORDED FRAME SEQUENCE; transitions omitted",
+    "kind": "single",
+    "source_ids": [
+      "fixed-2"
+    ]
+  },
+  {
+    "start": 142,
+    "end": 147,
+    "title": "Fixed control  3/4",
+    "body": [
+      "Choose Today",
+      "Same export \u2022 fresh reset \u2022 model calls 0",
+      "Developer-supplied fixed control; not ReproLoop repair."
+    ],
+    "caption": "Fixed model-free replay: choose today.",
+    "mode": "RECORDED NO-MODEL REPLAY",
+    "image": "fixed-3",
+    "extra": "RECORDED FRAME SEQUENCE; transitions omitted",
+    "kind": "single",
+    "source_ids": [
+      "fixed-3"
+    ]
+  },
+  {
+    "start": 147,
+    "end": 152,
+    "title": "Fixed control  4/4",
+    "body": [
+      "Cancel",
+      "Same export \u2022 fresh reset \u2022 model calls 0",
+      "Developer-supplied fixed control; not ReproLoop repair."
+    ],
+    "caption": "Fixed model-free replay: cancel.",
+    "mode": "RECORDED NO-MODEL REPLAY",
+    "image": "fixed-4",
+    "extra": "RECORDED FRAME SEQUENCE; transitions omitted",
+    "kind": "single",
+    "source_ids": [
+      "fixed-4"
+    ]
+  },
+  {
+    "start": 152,
+    "end": 158,
+    "title": "Same test. Different outcome.",
+    "body": [
+      "FAULTY: Today \u2022 failure true",
+      "FIXED: Release \u2022 failure false",
+      "Both workflows completed."
+    ],
+    "caption": "The developer-supplied fixed control keeps Release. Faulty is true; fixed is false.",
+    "mode": "RECORDED NO-MODEL REPLAY",
+    "image": [
+      "faulty-4",
+      "fixed-4"
+    ],
+    "extra": "Same export 0f2185d9 \u2022 builds 5b7e27d2 / 4bcd2374",
+    "kind": "split",
+    "source_ids": [
+      "faulty-4",
+      "fixed-4"
+    ]
+  },
+  {
+    "start": 158,
+    "end": 166,
+    "title": "Preserve both result cohorts.",
+    "body": [
+      "Original v3 pilot: 2/5; target \u22653/5 missed.",
+      "3 original failures remain.",
+      "Separate v4obs1 FINAL: 3/3 pairs."
+    ],
+    "caption": "Original pilot: two of five, below target. Separate FINAL: three of three correlated variants.",
+    "mode": "RECORDED RESULTS",
+    "image": null,
+    "extra": "One F01 family \u2022 three correlated variants \u2022 not independent bugs",
+    "kind": "wide",
+    "source_ids": [
+      "aggregate-claims"
+    ]
+  },
+  {
+    "start": 166,
+    "end": 172,
+    "title": "Bounded evidence. Real limits.",
+    "body": [
+      "Each FINAL: 5 calls, 4 inputs, 2 controls.",
+      "Cumulative: 54/60 calls; $1.030238 token fees.",
+      "Uploads UNPRICED; no generic accuracy claim."
+    ],
+    "caption": "Each FINAL case used five model calls and two model-free controls. Upload fees remain unpriced.",
+    "mode": "RECORDED RESULTS",
+    "image": null,
+    "extra": "Cumulative fees include earlier failed conditions; not final billing",
+    "kind": "wide",
+    "source_ids": [
+      "aggregate-claims"
+    ]
+  },
+  {
+    "start": 172,
+    "end": 180,
+    "title": "A replay we can verify.",
+    "body": [
+      "PRIVATE PROTOTYPE",
+      "Not release approved.",
+      "Generalization not evaluated."
+    ],
+    "caption": "Private prototype. Not release approved. Generalization has not been evaluated.",
+    "mode": "PRIVATE \u2022 RECORDED EVIDENCE",
+    "image": null,
+    "extra": "Byte integrity is not producer, physical-tap, timestamp or OS attestation.",
+    "kind": "wide",
+    "source_ids": []
+  }
+]
